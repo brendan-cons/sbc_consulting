@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brendan Case, CISSP | IT Consultant & CMMC SME</title>
+  <title>Brendan Case | IT Consultant & CMMC SME</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,26 +39,33 @@
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      margin-bottom: 40px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .download-btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
+    .tab-content {
+      display: none;
       margin-top: 20px;
     }
-    ul {
-      padding-left: 20px;
+    .tab-content.active {
+      display: block;
     }
-    li {
-      margin-bottom: 6px;
+    .tabs {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tabs a {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px 5px 0 0;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    .tabs a.active {
+      background-color: #007bff;
     }
     footer {
       text-align: center;
@@ -67,92 +74,186 @@
       color: white;
       margin-top: 40px;
     }
-    form {
-      background-color: #555;
-      padding: 20px;
-      border-radius: 8px;
+
+    /* Styling for badges */
+    .badge-container {
+      text-align: center;
+      margin-top: 20px;
     }
-    input[type="text"], input[type="email"], textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: #333;
-      color: #fff;
+    .badge-container img {
+      width: 80px; /* Adjust the width to make the images smaller */
+      height: auto;
+      margin: 0 10px; /* Add space between the badges */
     }
-    input[type="submit"] {
+
+    /* Styling for the download button */
+    .download-btn {
+      display: inline-block;
       background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
+      color: #fff;
+      padding: 15px 25px;
       font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
     }
-    input[type="submit"]:hover {
+
+    /* Hover effect for the download button */
+    .download-btn:hover {
       background-color: #0056b3;
+      transform: translateY(-3px);
+    }
+
+    /* Focus effect for accessibility */
+    .download-btn:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+    }
+
+    /* Active state for button click */
+    .download-btn:active {
+      background-color: #004085;
+      transform: translateY(1px);
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-  </nav>
 
   <div class="container">
-    <header id="home">
-      <h1>Brendan Case, CISSP</h1>
-      <p><strong>IT Consultant | Cloud Engineer | Security Architect | CMMC SME</strong></p>
-      <p><em>Helping organizations bridge the gap between security, compliance, and business efficiency.</em></p>
-      <a href="Resume.pdf" download class="download-btn">Download My Resume (PDF)</a>
-    </header>
+    <nav>
+      <div class="tabs">
+        <a href="#" class="tab-link active" data-tab="welcome">Welcome</a>
+        <a href="#" class="tab-link" data-tab="about">About Me</a>
+        <a href="#" class="tab-link" data-tab="skills">Skills</a>
+        <a href="#" class="tab-link" data-tab="education">Education</a>
+        <a href="#" class="tab-link" data-tab="resume">Resume</a>
+      </div>
+    </nav>
 
-    <section id="about">
+    <!-- Welcome Section -->
+    <div id="welcome" class="tab-content active">
+      <header>
+        <h1>Welcome to My Professional Portfolio</h1>
+        <p><strong>Brendan Case</strong></p>
+        <p><em>IT Consultant | Cloud Engineer | Security Architect | CMMC SME</em></p>
+        <p>Welcome! I'm Brendan Case, a seasoned IT professional with a passion for helping organizations navigate the complex landscape of security, compliance, and business optimization. With my expertise in cybersecurity, cloud engineering, and CMMC consulting, I am committed to providing tailored solutions that reduce risk, improve efficiency, and ensure your organization meets the highest standards.</p>
+        <p>In my career, I’ve had the privilege of working with a wide range of clients, primarily within the DoD and federal contracting space, assisting them with everything from security audits to modernizing their IT infrastructures. I have also been instrumental in standing up internal IT departments for organizations, ensuring that their teams are equipped with the right tools, technologies, and processes to operate efficiently and securely.</p>
+        <p>Whether it's helping you achieve CMMC certification, implementing Zero Trust architecture, or ensuring your cloud environment is secure and compliant, my goal is to provide actionable solutions that drive your business forward. I specialize in transforming outdated systems and practices into modern, efficient, and secure infrastructures, tailored to your organization's unique needs and objectives.</p>
+        <p>I look forward to the opportunity to collaborate and network with you, understanding your unique needs, and delivering results that align with your business goals. Please feel free to explore my portfolio and reach out with any questions—let's work together to secure and optimize your organization.</p>
+      </header>
+
+      <!-- Badges -->
+      <div class="badge-container">
+        <img src="media/security+.png" alt="CompTIA Security+" class="badge">
+        <img src="media/server+.png" alt="CompTIA Server+" class="badge">
+        <img src="media/microsoft-certified-azure-fundamentals.png" alt="Microsoft Azure Fundamentals" class="badge">
+        <img src="media/isc2-candidate.png" alt="ISC2 Candidate" class="badge">
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="tab-content">
       <h2>About Me</h2>
-      <p>I'm a seasoned IT professional and trusted advisor to federal contractors and DoD-aligned organizations. My mission is to help clients securely architect, manage, and modernize their infrastructure while aligning with the latest compliance standards. Whether it's implementing Zero Trust models, auditing for CMMC readiness, or leading secure cloud deployments—I'm committed to delivering actionable solutions that reduce risk and maximize operational efficiency.</p>
-      <p>With extensive experience in IT department modernization, I specialize in transforming outdated IT practices into modern, efficient systems. From establishing standardized policies to introducing new tools, I work closely with cybersecurity leadership to bridge the gap between technical needs and organizational objectives, ensuring that businesses meet compliance standards and improve operational efficiency.</p>
-    </section>
+      <p>I’m a seasoned IT professional and trusted advisor to federal contractors and DoD-aligned organizations. My mission is to help clients securely architect, manage, and modernize their infrastructure while aligning with the latest compliance standards. Whether it's implementing Zero Trust models, auditing for CMMC readiness, or leading secure cloud deployments—I'm committed to delivering actionable solutions that reduce risk and maximize operational efficiency.</p>
 
-    <section id="skills">
+      <!-- Badges -->
+      <div class="badge-container">
+        <img src="media/security+.png" alt="CompTIA Security+" class="badge">
+        <img src="media/server+.png" alt="CompTIA Server+" class="badge">
+        <img src="media/microsoft-certified-azure-fundamentals.png" alt="Microsoft Azure Fundamentals" class="badge">
+        <img src="media/isc2-candidate.png" alt="ISC2 Candidate" class="badge">
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div id="skills" class="tab-content">
       <h2>Technical Skills & Expertise</h2>
       <ul>
-        <li><strong>Cybersecurity & Compliance:</strong> CMMC, NIST 800-171/800-53, STIGs, Zero Trust Architecture, Endpoint Hardening, Security Audits</li>
-        <li><strong>DoD Compliance & CMMC Expertise:</strong> Successfully assisted organizations in achieving CMMC Level 2 certification, ensuring compliance with federal regulations and aligning security controls with NIST 800-53 and 800-171 frameworks. Specialized in guiding organizations through the audit process and implementing necessary security controls.</li>
-        <li><strong>Cloud & Identity:</strong> Microsoft Azure Security Center, Entra ID (Azure AD), Intune MDM/MAM, Conditional Access Policies, DLP Policies</li>
-        <li><strong>Infrastructure Engineering:</strong> Active Directory, DNS/DHCP, Windows Server, Group Policy Management, Hyper-V, WSUS</li>
-        <li><strong>Automation Success:</strong> Implemented automated patch management solutions that reduced patching time by 40%, ensuring compliance with CMMC and improving system security.</li>
-        <li><strong>DevOps & Automation:</strong> Experience with CI/CD pipelines using GitLab, PowerShell automation, and SQL task automation, helping organizations streamline their security operations and IT management.</li>
-        <li><strong>Security Operations:</strong> SIEM Deployment, Incident Response, Threat Hunting, Log Aggregation, Vulnerability Management</li>
-        <li><strong>Networking & Systems:</strong> Fortinet Security Appliances, TCP/IP, VPN Configuration, Firewall Policy Design</li>
-        <li><strong>IT Consulting & Support:</strong> Risk Management, Change Advisory, Technical Documentation, SOP Development, End-User Training</li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Cyber Security Specialist – March 2019, My Computer Career</li>
-        <li>IT Systems Administration – April 2017, My Computer Career</li>
+        <li><strong>Cybersecurity & Compliance:</strong> CMMC, NIST 800-171/800-53, STIGs, Zero Trust Architecture, Endpoint Hardening, Security Audits, Vulnerability Management, Penetration Testing, Risk Assessments</li>
+        <li><strong>Cloud Engineering & Infrastructure:</strong> Azure, AWS, Cloud Security, Hybrid Environments, Cloud Migrations, DevOps, Automation, Infrastructure as Code (IaC), Virtualization (Hyper-V, VMware)</li>
+        <li><strong>Cloud Services & Storage:</strong> Cloud Data Management, Cloud Infrastructure, Cloud Security, Cloud Services, Cloud Storage</li>
+        <li><strong>DoD Compliance & CMMC Expertise:</strong> Successfully assisted organizations in achieving CMMC Level 2 certification, ensuring compliance with federal regulations and assisting with audits for CMMC readiness</li>
+        <li><strong>Networking & Infrastructure:</strong> Cisco Routing & Switching, FortiGate Firewalls, VPN Configurations, SD-WAN, Load Balancing, High Availability, Network Design & Implementation, Network Administration, Local Area Networks (LAN), Wide Area Networks (WAN), Network Protocols, TCP/IP</li>
+        <li><strong>Network Security & Firewalls:</strong> Network Security, Firewalls, Intrusion Detection/Prevention, Secure Remote Access, VPN, Malware Analysis, Threat Detection, Threat Management, Network Security Policies</li>
+        <li><strong>Forensics & Cryptography:</strong> Computer Forensics, Cryptography, Data Security, Digital Evidence Collection, Encryption Standards</li>
+        <li><strong>System & Server Administration:</strong> Server Administration, System Administration, Windows Server, Linux, Active Directory, Group Policy, System Monitoring & Automation, Backup & Recovery, Server Hardening</li>
+        <li><strong>Security Management & Policies:</strong> Information Security Management, Security Policies, Security Awareness, Security Management, Incident Response, Risk Management, IT Security Strategy</li>
+        <li><strong>Mobile & Wireless Security:</strong> Mobile Security, Wireless Communications, Wireless Security, Mobile Device Management (MDM), Secure BYOD Policies</li>
+        <li><strong>Disaster Recovery & Business Continuity:</strong> Disaster Recovery, Business Continuity Planning, High Availability, Data Backup Solutions</li>
+        <li><strong>Troubleshooting & Support:</strong> Troubleshooting, Technical Support, Issue Resolution, Systems Diagnostics, Performance Optimization</li>
       </ul>
 
-      <h3>Certifications & Clearance</h3>
+      <!-- Badges -->
+      <div class="badge-container">
+        <img src="media/security+.png" alt="CompTIA Security+" class="badge">
+        <img src="media/server+.png" alt="CompTIA Server+" class="badge">
+        <img src="media/microsoft-certified-azure-fundamentals.png" alt="Microsoft Azure Fundamentals" class="badge">
+        <img src="media/isc2-candidate.png" alt="ISC2 Candidate" class="badge">
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education" class="tab-content">
+      <h2>Certifications & Clearance</h2>
       <ul>
         <li>CompTIA Server+</li>
         <li>CompTIA Security+</li>
         <li>Microsoft Azure Fundamentals</li>
-        <li>MTA Networking</li>
         <li>Active Secret Clearance</li>
-        <li><strong>CISSP – Certified Information Systems Security Professional</strong></li>
       </ul>
-    </section>
+
+      <!-- Badges -->
+      <div class="badge-container">
+        <img src="media/security+.png" alt="CompTIA Security+" class="badge">
+        <img src="media/server+.png" alt="CompTIA Server+" class="badge">
+        <img src="media/microsoft-certified-azure-fundamentals.png" alt="Microsoft Azure Fundamentals" class="badge">
+        <img src="media/isc2-candidate.png" alt="ISC2 Candidate" class="badge">
+      </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div id="resume" class="tab-content">
+      <h2>Resume</h2>
+      <p>You can download my resume here:</p>
+      <a href="Resume.pdf" download class="download-btn">Download My Resume (PDF)</a>
+
+      <!-- Badges -->
+      <div class="badge-container">
+        <img src="media/security+.png" alt="CompTIA Security+" class="badge">
+        <img src="media/server+.png" alt="CompTIA Server+" class="badge">
+        <img src="media/microsoft-certified-azure-fundamentals.png" alt="Microsoft Azure Fundamentals" class="badge">
+        <img src="media/isc2-candidate.png" alt="ISC2 Candidate" class="badge">
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    <p>&copy; 2025 Brendan Case. All rights reserved.</p>
+    <p>&copy; 2025 Brendan Case | IT Consultant | Cloud Engineer | Security Architect | CMMC SME</p>
   </footer>
+
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all tabs and tab contents
+        tabLinks.forEach(link => link.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked tab and corresponding tab content
+        link.classList.add('active');
+        const tabId = link.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
