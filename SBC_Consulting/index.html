@@ -109,7 +109,7 @@
       <h1>Brendan Case, CISSP</h1>
       <p><strong>IT Consultant | Cloud Engineer | Security Architect | CMMC SME</strong></p>
       <p><em>Helping organizations bridge the gap between security, compliance, and business efficiency.</em></p>
-      <a href="Resume.pdf" download class="download-btn">Download My Resume (PDF)</a>
+      <a href="Brendan_Case_Resume.pdf" download class="download-btn">Download My Resume (PDF)</a>
     </header>
 
     <section id="about">
@@ -153,7 +153,9 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
