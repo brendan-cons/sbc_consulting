@@ -45,9 +45,11 @@
     .tab-content {
       display: none;
       margin-top: 20px;
+      overflow: auto; /* Allows scrolling if the content is too large */
     }
     .tab-content.active {
       display: block;
+      padding-bottom: 30px; /* Optional: adds extra space to the bottom */
     }
     .tabs {
       text-align: center;
@@ -118,6 +120,16 @@
     .download-btn:active {
       background-color: #004085;
       transform: translateY(1px);
+    }
+
+    /* Additional styles for skills section */
+    ul {
+      list-style-type: none; /* Removes default bullets */
+      padding-left: 0; /* Ensures no left indentation */
+    }
+
+    ul li {
+      padding: 5px 0; /* Adds spacing between list items */
     }
   </style>
 </head>
@@ -234,6 +246,7 @@
 
   <footer>
     <p>&copy; 2025 Brendan Case | IT Consultant | Cloud Engineer | Security Architect | CMMC SME</p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/brendan-case" target="_blank" style="color: #fff;">LinkedIn</a></p>
   </footer>
 
   <script>
